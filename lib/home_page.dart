@@ -1,4 +1,5 @@
 import 'package:bmiplus/colors.dart';
+import 'package:bmiplus/control.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,7 +23,11 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: GestureDetector(
                   onTap: (){
-
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Control(ismale: true)),
+                    );
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -54,7 +59,11 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: GestureDetector(
                   onTap: (){
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Control(ismale: false)),
+                    );
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
